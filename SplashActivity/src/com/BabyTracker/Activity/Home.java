@@ -39,7 +39,7 @@ import com.BabyTracker.dialog.BabyTrackerAlert;
 /**
  *  This is the class which will display all the home screen details.
  *  First you need register you baby to access home screen items.
- * @author android
+ * @author Satyasivaprasad
  *
  */
 public class Home extends MenuOptionsActivity {
