@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/doctorappointment_listview_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/doctorappointment_REL_header"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/titlebar"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/nav_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="3dp" >
+
+                    <ImageView
+                        android:id="@+id/left_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_left" />
+
+                    <TextView
+                        android:id="@+id/nav_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/left_img"
+                        android:text="Home"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/simple_top_bar_Txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:text="Growth"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/doctorappointment_BTN_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/add" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--
+        <com.BabyTracker.Helper.SegmentedRadioGroup
+            android:id="@+id/segment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorappointment_listview_REL_header"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dip"
+            android:checkedButton="@+id/appointments_segment_btn_finishedappointments"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/appointments_segment_btn_pendingAppointments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Pending Appointments"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/appointments_segment_btn_finishedappointments"
+                android:button="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Finished Appointments"
+                android:textColor="#000000" />
+        </com.BabyTracker.Helper.SegmentedRadioGroup>
+        -->
+
+        <ListView
+            android:id="@+id/doctorappointment_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/doctorappointment_listview_REL_header"
+            android:background="@drawable/bg" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/doctorappointment_details_REL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/doctor_icon_bg" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/doctorappointment_display_REL_nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_data_not_available"
+            android:visibility="gone" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+
+    <resources>
+        <color name="transperent">#00000000</color>
+        <color name="semi_dark_transperent">#55000000</color>
+        <color name="white">#ffffff</color>
+        <color name="black">#000000</color>
+        <color name="light_blue">#00BFFF</color>
+        <color name="deep_pink">#FF1493</color>
+    </resources>

@@ -1,0 +1,18 @@
+
+    <resources>
+        <style name="bodytext">
+		    <item name="android:paddingLeft">4px</item>
+		    <item name="android:paddingBottom">4px</item>
+		    <item name="android:textColor">#000000</item>
+		    <item name="android:textSize">12sp</item>
+		    <item name="android:textStyle">bold</item>
+		    <item name="android:focusable">true</item>
+		 </style>
+		 
+        <style name="headertext">
+            <item name="android:textColor">#000000</item>
+            <item name="android:textSize">15sp</item>
+            <item name="android:textStyle">bold</item>
+            <item name="android:focusable">true</item>
+        </style>
+    </resources>

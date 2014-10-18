@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/babies_listview_REL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/babytracker_row" >
+
+        <ImageView
+            android:id="@+id/babies_listview_IMG_baby"
+            android:layout_width="70dip"
+            android:layout_height="70dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/babies_listview_IMG_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow" />
+
+        <RelativeLayout
+            android:id="@+id/babies_listview_row_REL_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/babies_listview_IMG_arrow"
+            android:layout_toRightOf="@+id/babies_listview_IMG_baby"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/babies_listview_row_REL_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/babies_listview_row_REL_weight_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+
+                    <TextView
+                        android:id="@+id/babies_listview_row_TXT_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/weight"
+                        android:padding="3dp"
+                        android:text="2.3 Kgs"
+                        android:textColor="#000000" />
+
+                    <!--
+                         <ImageView
+                        android:id="@+id/babies_listview_row_IMG_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/babies_listview_row_TXT_weight"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/weight" />
+                    -->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/babies_listview_TXT_babyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dip"
+                    android:singleLine="true"
+                    android:text="Baby name Here"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/babies_listview_row_REL_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/babies_listview_row_REL_weight"
+                android:layout_toLeftOf="@+id/babies_listview_IMG_arrow"
+                android:layout_toRightOf="@+id/babies_listview_IMG_baby" >
+
+                <RelativeLayout
+                    android:id="@+id/babies_listview_row_REL_height_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" >
+
+                    <TextView
+                        android:id="@+id/babies_listview_TXT_babyheight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:drawableLeft="@drawable/babyheight"
+                        android:padding="3dp"
+                        android:text="30mm"
+                        android:textColor="#000000" />
+
+                    <!--
+                         <ImageView
+                        android:id="@+id/babies_listview_IMG_babyheight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/babies_listview_TXT_babyheight"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/babyheight" />
+                    -->
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/babies_listview_TXT_dateofbirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:singleLine="true"
+                    android:text="29-05-2012"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

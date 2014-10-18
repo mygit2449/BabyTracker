@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="SmallDescriptionText">13dp</dimen>
+    
+    
+    <dimen name="Title_Text_size">20dp</dimen>
+    <dimen name="SubTitle">19dp</dimen>
+    <dimen name="List_Title_size">19dp</dimen>
+    <dimen name="List_Text_size">16dp</dimen>
+    <dimen name="DescriptionText">16dp</dimen>
+    <dimen name="Text">23dp</dimen>
+    <dimen name="List_Image_height">80dp</dimen>
+    <dimen name="List_Image_width">80dp</dimen>
+    <dimen name="Title_Layout_height">35dp</dimen>
+     
+     <dimen name="Tab_Title_Text_size">30dp</dimen>
+     <dimen name="Tab_Subtitle">26dp</dimen>
+     <dimen name="Tab_List_Title_size">26dp</dimen>
+     <dimen name="Tab_List_Text_size">20dp</dimen>
+     <dimen name="Tab_text">25dp</dimen>
+     <dimen name="Tab_List_Image_height">80dp</dimen>
+     <dimen name="Tab_List_Image_width">80dp</dimen>
+     <dimen name="Tab_Title_Layout_height">50dp</dimen>
+     
+   <!--  <dimen name="Tab_DescriptionText">2dp</dimen>
+    <dimen name="Tab_SubTitle">23dp</dimen>  -->
+    
+</resources>

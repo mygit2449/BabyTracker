@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/babyprofile_details_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/babyprofile_details_REL_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                layout="@layout/simple_top_bar" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/babyprofile_details_Scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/babyprofile_details_REL_header"
+            android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/babyprofile_details_REL_babydetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingTop="30dip" >
+
+                <TextView
+                    android:id="@+id/babyprofile_details_Txt_title"
+                    style="@style/headertext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Enter Your Baby Details."
+                    android:textColor="@color/black" />
+
+                <RelativeLayout
+                    android:id="@+id/babyprofile_details_REL_babyphoto_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/babyprofile_details_Txt_title"
+                    android:padding="10dp" >
+
+                    <ImageButton
+                        android:id="@+id/babyprofile_details_IMG_babyimage"
+                        android:layout_width="100dip"
+                        android:layout_height="100dip"
+                        android:layout_below="@+id/babyprofile_details_Txt_title"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/babytracker_photobg"
+                        android:scaleType="fitXY" 
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:id="@+id/babyprofile_details_Txt_photo"
+                        style="@style/bodytext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/babyprofile_details_IMG_babyimage" 
+                        android:paddingTop="5dp" 
+                        android:layout_centerHorizontal="true"   
+                        android:text="Choose Your Baby Photo."   
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/babyprofile_details_REL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/babyprofile_details_REL_babyphoto_name"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/babyprofile_details_LL_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/babyprofile_details_TXT_babyname"
+                            style="@style/bodytext"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Name : "
+                            android:textColor="#000000" />
+
+                        <EditText
+                            android:id="@+id/babyprofile_details_ETXT_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dip"
+                            android:layout_toRightOf="@+id/babyprofile_details_TXT_babyname"
+                            android:hint="Name*"
+                            android:padding="4dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/babyprofile_details_LL_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/babyprofile_details_LL_name"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/babyprofile_details_TXT_babyage"
+                            style="@style/bodytext"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Date of Birth :"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/babyprofile_details_TXT_babydate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dip"
+                            android:layout_toRightOf="@+id/babyprofile_details_TXT_babyage"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:hint=" Dateofbirth*"
+                            android:paddingLeft="2dip"
+                            android:textColor="@android:color/black"
+                            android:background="@drawable/bg_edittext" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/babyprofile_details_LL_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/babyprofile_details_LL_age"
+                        android:padding="5dp" >
+
+                        <TextView
+                            android:id="@+id/babyprofile_details_Txt_sex"
+                            style="@style/bodytext"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dip"
+                            android:text="Gender:"
+                            android:textColor="@color/black" />
+
+                        <RadioGroup
+                            android:id="@+id/babyprofile_details_RG_radioSex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/babyprofile_details_Txt_sex"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioMale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:onClick="onRadioButtonClicked"
+                                android:text="Boy"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <RadioButton
+                                android:id="@+id/radioFemale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="onRadioButtonClicked"
+                                android:text="Girl"
+                                android:textColor="@color/black"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+                        </RadioGroup>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/babygrowth_details_LIN_babydetails3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/babyprofile_details_LL_gender"
+                        android:gravity="center"
+                        android:padding="5dip" >
+
+                        <Button
+                            android:id="@+id/babyprofile_details_BTN_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/submit"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/babyprofile_details_BTN_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/babyprofile_details_BTN_add"
+                            android:background="@drawable/clear" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/babyprofile_details_LIN_babydetails4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/babyprofile_details_LL_gender"
+                        android:gravity="center"
+                        android:padding="5dip"
+                        android:visibility="gone" >
+
+                        <Button
+                            android:id="@+id/babyprofile_details_BTN_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/save"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/babyprofile_details_BTN_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_toRightOf="@+id/babyprofile_details_BTN_save"
+                            android:background="@drawable/cancel" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

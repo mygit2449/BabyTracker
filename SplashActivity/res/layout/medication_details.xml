@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/medication_details_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/medication_details_REL_header"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/titlebar"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/nav_rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:padding="3dp" >
+
+                    <ImageView
+                        android:id="@+id/left_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/arrow_left" />
+
+                    <TextView
+                        android:id="@+id/nav_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/left_img"
+                        android:text="Home"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </RelativeLayout>
+                
+                <TextView
+                    android:id="@+id/simple_top_bar_Txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:text="Medication"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/medication_details_BTN_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/edit_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/medication_details_REL_babydetails"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/medication_details_REL_header"
+            android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/medication_details_REL_babydetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/doctor_icon_bg" >
+            </RelativeLayout>
+
+            <ScrollView
+                android:id="@+id/medication_details_Scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dip" >
+
+                <RelativeLayout
+                    android:id="@+id/medication_details_REL_babydetails"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/medication_details_REL_medicationtype"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip" >
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_medicationtype"
+                            android:layout_width="130dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Medication Type :"
+                            android:textColor="#000000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_medicationtype_display"
+                            android:layout_width="110dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medication_details_TXT_medicationtype"
+                            android:text="Tablet"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/medication_details_REL_duration"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/medication_details_REL_medicationtype"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip" >
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_duration"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Duration :"
+                            android:textColor="#000000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_duration_display"
+                            android:layout_width="110dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medication_details_TXT_duration"
+                            android:text="3 Days"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/medication_details_REL"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/medication_details_REL_duration"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip" >
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_dosage"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Dosage :"
+                            android:textColor="#000000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_dosage_display"
+                            android:layout_width="110dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medication_details_TXT_dosage"
+                            android:text="100 mg"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/medication_details_REL_dateofbirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/medication_details_REL"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip" >
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_medicinename"
+                            android:layout_width="130dip"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Medicine Name : "
+                            android:textColor="#000000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_medicinename_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medication_details_TXT_medicinename"
+                            android:text="medicine name "
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/medication_details_REL_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/medication_details_REL_dateofbirth"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="15dip" >
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_note"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Description : "
+                            android:textColor="#000000"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/medication_details_TXT_note_display"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/medication_details_TXT_note"
+                            android:text="Description here"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

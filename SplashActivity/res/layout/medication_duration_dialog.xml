@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/medication_layout_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/medication_month_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/medication_btn_duration_increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timepicker_up_normal" />
+
+        <TextView
+            android:id="@+id/medication_txt_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timepicker_input_normal"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/Tab_List_Title_size" />
+
+        <Button
+            android:id="@+id/medication_btn_duration_decrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timepicker_down_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/medication_day_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/medication_month_layout"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/medication_btn_time_increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timepicker_up_normal" />
+
+        <TextView
+            android:id="@+id/medication_txt_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timepicker_input_normal"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/Tab_List_Title_size" />
+
+        <Button
+            android:id="@+id/medication_btn_time_decrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/timepicker_down_normal" />
+    </LinearLayout>
+
+</RelativeLayout>

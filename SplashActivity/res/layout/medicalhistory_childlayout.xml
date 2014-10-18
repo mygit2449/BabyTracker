@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/medicalhistory_childlayout_REL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <LinearLayout
+            android:id="@+id/medicalhistory_childlayout_LIN_medicalhistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/medicalhistory_childlayout_REL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/medicalhistory_childlayout_TXT_purpose"
+                    android:layout_width="85dip"
+                    android:layout_height="wrap_content"
+                    android:text="Purpose:"
+                    android:textColor="#000000"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/medicalhistory_childlayout_TXT_purposedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/medicalhistory_childlayout_TXT_purpose"
+                    android:text="purpose"
+                    android:textColor="#000000"
+                    android:textSize="15dip"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/medicalhistory_childlayout_REL_remarks"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/medicalhistory_childlayout_TXT_remarks"
+                    android:layout_width="85dip"
+                    android:layout_height="wrap_content"
+                    android:text="Remarks:"
+                    android:textColor="#000000"
+                    android:textSize="17dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/medicalhistory_childlayout_TXT_remarksdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/medicalhistory_childlayout_TXT_remarks"
+                    android:text="Remarks"
+                    android:textColor="#000000"
+                    android:textSize="15dip"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/medicalhistory_childlayout_REL_note"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/medicalhistory_childlayout_TXT_note"
+                    android:layout_width="85dip"
+                    android:layout_height="wrap_content"
+                    android:text="Note:"
+                    android:textColor="#000000"
+                    android:textSize="17dip"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/medicalhistory_childlayout_TXT_notedetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/medicalhistory_childlayout_TXT_note"
+                    android:text="Notes"
+                    android:textColor="#000000"
+                    android:textSize="15dip"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

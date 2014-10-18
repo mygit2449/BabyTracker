@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/vaccination_details_REL_header"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/titlebar"
+            android:padding="5dp" >
+
+            <RelativeLayout
+                android:id="@+id/nav_rel"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:padding="3dp" >
+
+                <ImageView
+                    android:id="@+id/left_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/arrow_left" />
+
+                <TextView
+                    android:id="@+id/nav_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/left_img"
+                    android:text="Home"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/simple_top_bar_Txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="4dp"
+                android:text="Vaccination Details"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/vaccination_details_REL_babydetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/vaccination_icon_bg" >
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/vaccination_details_Scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/vaccination_details_REL_header"
+            android:padding="5dip" >
+
+            <RelativeLayout
+                android:id="@+id/vaccination_details_REL_babydetails"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <RelativeLayout
+                    android:id="@+id/vaccination_details_REL_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_babyname"
+                        android:layout_width="150dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Vaccination name : "
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_babyname_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/vaccination_details_TXT_babyname"
+                        android:text="name"
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vaccination_details_REL_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vaccination_details_REL_name"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Description : "
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_description_display"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/vaccination_details_TXT_description"
+                        android:layout_centerVertical="true"
+                        android:text="Description..."
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vaccination_details_REL_date"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vaccination_details_REL_description"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_date"
+                        android:layout_width="150dip"
+                        android:layout_height="wrap_content"
+                        android:text="Vaccination time : "
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_time_display"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/vaccination_details_TXT_date"
+                        android:text="Vaccination Time..."
+                        android:textColor="#000000" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vaccination_details_REL_status"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vaccination_details_REL_date"
+                    android:padding="5dp" >
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_status"
+                        android:layout_width="150dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Vaccination Status: "
+                        android:textColor="#000000"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccination_details_TXT_status_display"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/vaccination_details_TXT_status"
+                        android:text="Given "
+                        android:textColor="#000000" />
+
+                    <CheckBox
+                        android:id="@+id/vaccination_status_chkb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:button="@drawable/customised_chkbx" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/vaccination_details_REL_Btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/vaccination_details_REL_status" >
+
+                    <Button
+                        android:id="@+id/vaccination_details_description_BTN_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/save" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

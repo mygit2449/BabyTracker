@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/babygrowth_listview_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/babygrowth_listview_REL_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                layout="@layout/simple_top_bar" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/babygrowth_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/babygrowth_listview_REL_header"
+            android:background="@drawable/bg" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/babygrowth_listview_REL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/babytracker_icon_bg" >
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

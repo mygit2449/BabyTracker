@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/babytracker_row"
+    android:padding="5dip" >
+
+    <RelativeLayout
+        android:id="@+id/babygrowth_list_row_REL1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" 
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/babygrowth_list_row_REL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_date"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center|left"
+                android:text="06"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_monthandyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/babygrowth_list_row_TXT_date"
+                android:layout_marginTop="10dp"
+                android:text="06-2012"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/babygrowth_list_row_IMG_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/babygrowth_list_row_REL"
+            android:src="@drawable/line" />
+
+        <RelativeLayout
+            android:id="@+id/babygrowth_list_row_REL_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_weigth"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Weight:"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_babyweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/babygrowth_list_row_TXT_weigth"
+                android:text="15Kgs"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_heightdisplay"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/babygrowth_list_row_TXT_babyweight"
+                android:text="Height:"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_babyheight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/babygrowth_list_row_TXT_babyweight"
+                android:layout_toRightOf="@+id/babygrowth_list_row_TXT_heightdisplay"
+                android:text="90cm"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_circumference_display"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/babygrowth_list_row_TXT_babyheight"
+                android:text="Circumference:"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/babygrowth_list_row_TXT_babycircumference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/babygrowth_list_row_TXT_babyheight"
+                android:layout_toRightOf="@+id/babygrowth_list_row_TXT_circumference_display"
+                android:text="25cm"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

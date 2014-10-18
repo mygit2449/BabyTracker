@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dailyactivity_REL_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/dialyactivity_details_REL_header"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/babytracker_header"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            layout="@layout/simple_top_bar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/babygrowth_details_REL_babydetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/activity_icon_bg" >
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/dailyactivity_details_Scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialyactivity_details_REL_header"
+        android:background="@drawable/bg" >
+
+        <RelativeLayout
+            android:id="@+id/dailyactivity_details_REL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:padding="5dp">
+
+            <RelativeLayout
+                android:id="@+id/dailyactivity_details_REL2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_growth_details" >
+
+                <RelativeLayout
+                    android:id="@+id/dailyactivity_details_REL_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/dailyactivity_details_REL_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp" >
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_quantity_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/milk_quantity_text" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dailyactivity_details_REL_milkquantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dailyactivity_details_REL_list" >
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_dec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/btn_decrease" />
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_inc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/dailyactivity_details_TXT_milkquantity"
+                            android:src="@drawable/btn_increase" />
+
+                        <TextView
+                            android:id="@+id/dailyactivity_details_TXT_milkquantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/dailyactivity_details_IMG_dec"
+                            android:background="@drawable/btn_mid_milkquantity"
+                            android:gravity="center"
+                            android:text="select"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dailyactivity_details_REL_sleepingHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dailyactivity_details_REL_list"
+                    android:layout_centerHorizontal="true" >
+
+                    <RelativeLayout
+                        android:id="@+id/dailyactivity_details_REL_sleepingHours1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp" >
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_sleepingHours_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sleeping_hours_text" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dailyactivity_details_REL_sleepingHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dailyactivity_details_REL_sleepingHours1" >
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_dec_sleepingHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/btn_decrease" />
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_inc_sleepingHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/dailyactivity_details_TXT_sleepingHours"
+                            android:src="@drawable/btn_increase" />
+
+                        <TextView
+                            android:id="@+id/dailyactivity_details_TXT_sleepingHours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/dailyactivity_details_IMG_dec_sleepingHours"
+                            android:background="@drawable/btn_mid_milkquantity"
+                            android:gravity="center"
+                            android:text="select"
+                            android:textColor="#000000" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/dailyactivity_details_REL_diperchange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dailyactivity_details_REL_sleepingHours"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/dailyactivity_details_REL_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:padding="5dp" >
+
+                        <ImageView
+                            android:id="@+id/dailyactivity_details_IMG_diperchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/diper_change_text" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/dailyactivity_details_REL_diperchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dailyactivity_details_REL_list"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true" >
+
+                        <RadioGroup
+                            android:id="@+id/babyprofile_details_RG_radioChange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/dailyactivity_details_TXT_diper"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/radioYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Yes"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/radioNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dip"
+                                android:checked="true"
+                                android:text="No"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dailyactvity_details_REL_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dailyactivity_details_REL2"
+                android:layout_centerHorizontal="true"
+                android:padding="20dp" >
+
+                <Button
+                    android:id="@+id/dailyactivity_details_BTN_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/save_long" />
+
+                <Button
+                    android:id="@+id/dailyactivity_details_BTN_dailyActivities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dailyactivity_details_BTN_add"
+                    android:background="@drawable/view_activities_details" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

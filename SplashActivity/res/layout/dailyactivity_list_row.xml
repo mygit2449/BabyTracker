@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dailyactivity_list_row_REL_main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/babytracker_row"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:id="@+id/dailyactivity_details_REL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:id="@+id/dailyactivity_details_REL_activityDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp" >
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_activityDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date:"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_activityDateDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/dailyactivity_list_row_TXT_activityDate"
+                android:text="12-06-2012"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dailyactivity_details_REL_feedcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dailyactivity_details_REL_activityDate"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_feedcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feed Count:"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_feedcountStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/dailyactivity_list_row_TXT_feedcount"
+                android:text="times"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dailyactivity_details_REL_milkquantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dailyactivity_details_REL_feedcount"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_Mqty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milk Quantity:"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_MilkQtyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/dailyactivity_list_row_TXT_Mqty"
+                android:text="10 ounce"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dailyactivity_details_REL_sleepinghours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dailyactivity_details_REL_milkquantity"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_sleepinghours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sleeping hours:"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_sleepinghoursStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/dailyactivity_list_row_TXT_sleepinghours"
+                android:text="10 Hours"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dailyactivity_details_REL_milkquantityStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dailyactivity_details_REL_sleepinghours"
+            android:padding="2dp" >
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_diperCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No.of times Diper changed:"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dailyactivity_list_row_TXT_diperStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dailyactivity_list_row_TXT_MilkQtyStatus"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dip"
+                android:layout_toRightOf="@+id/dailyactivity_list_row_TXT_diperCount"
+                android:text="5 times"
+                android:textColor="#000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/home_header_REL"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/statusbar" >
+
+        <ImageView
+            android:id="@+id/home_header_Logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_img" />
+
+        <ImageView
+            android:id="@+id/home_header_logo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/home_header_Logo"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_text" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/homescreen_LinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/home_header_REL"
+        android:background="@drawable/scrollbar"
+        android:orientation="horizontal"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp" >
+
+        <RelativeLayout
+            android:id="@+id/header_REL_tracker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onTrackerClicked" >
+
+            <ImageView
+                android:id="@+id/header_IMG_tracker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_baby_tracker" />
+
+            <ImageView
+                android:id="@+id/header_IMG_tracker_TXT"
+                style="@style/headertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_IMG_tracker"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/title_babytracker" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header_REL_emergency"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onEmergencyClicked" >
+
+            <ImageView
+                android:id="@+id/header_IMG_emergency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_emergency" />
+
+            <ImageView
+                android:id="@+id/header_IMG_tracker_TXT"
+                style="@style/headertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_IMG_emergency"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/title_emergency" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header_REL_doctors"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onDoctorClicked" >
+
+            <ImageView
+                android:id="@+id/header_IMG_doctors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_doctors" />
+
+            <ImageView
+                android:id="@+id/header_IMG_tracker_TXT"
+                style="@style/headertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_IMG_doctors"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/title_doctors" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header_REL_remainders"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:onClick="onReminderClicked" >
+
+            <ImageView
+                android:id="@+id/header_IMG_remainders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_remainders" />
+
+            <ImageView
+                android:id="@+id/header_IMG_tracker_TXT"
+                style="@style/headertext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header_IMG_remainders"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/title_remainder" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/home_screen_Scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/homescreen_LinearLayout"
+        android:background="@drawable/bg_home"
+        android:padding="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/homescreen_REL_main"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/homescreen_LinearLayout" >
+
+            <RelativeLayout
+                android:id="@+id/homescreen_babyprofile_REL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/homescreen_REL_baby_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homescreen_LinearLayout"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/babyprofileview"
+                    android:paddingLeft="5dp" >
+
+                    <ImageView
+                        android:id="@+id/homescreen_baby_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerVertical="true"
+                        android:background="#6A5B07"
+                        android:padding="3dp"
+                        android:scaleType="fitXY" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/homescreen_baby_image"
+                        android:orientation="vertical"
+                        android:padding="7dp" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center" >
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp" >
+
+                                <TextView
+                                    android:id="@+id/homescreen_text_name"
+                                    style="@style/headertext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:gravity="center"
+                                    android:singleLine="true"
+                                    android:text="Baby Name"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/babyprofileview_horizontal" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:paddingTop="4dp" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <RelativeLayout
+                                    android:layout_width="170dp"
+                                    android:layout_height="50dp" >
+
+                                    <TextView
+                                        android:id="@+id/homescreen_text_babyage"
+                                        style="@style/headertext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center"
+                                        android:text="Baby age"
+                                        android:textSize="15sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="fill_parent"
+                                android:background="@drawable/babyprofileview_verticle" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/bg_home_options"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <RelativeLayout
+                                    android:layout_width="170dp"
+                                    android:layout_height="50dp" >
+
+                                    <TextView
+                                        android:id="@+id/homescreen_text_baby_gender"
+                                        style="@style/headertext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:gravity="center"
+                                        android:singleLine="true"
+                                        android:text="gender"
+                                        android:textSize="15sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homescreen_details_REL_growth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homescreen_REL_baby_details"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/btns_bg"
+                    android:onClick="onGrowthClicked"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/homescreen_growth_IMG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_growth" />
+
+                    <ImageView
+                        android:id="@+id/homescreen_growth_IMG_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/growth" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homescreen_details_REL_appointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homescreen_details_REL_growth"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/btns_bg"
+                    android:onClick="onAppointmentClicked"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/homescreen_appointment_IMG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_appointments" />
+
+                    <ImageView
+                        android:id="@+id/homescreen_appointment_IMG_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/appointments" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homescreen_details_REL_vaccination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homescreen_details_REL_appointment"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/btns_bg"
+                    android:onClick="onVaccinationClicked"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/homescreen_vaccination_IMG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_vaccination" />
+
+                    <ImageView
+                        android:id="@+id/homescreen_vaccination_IMG_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/vaccination" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homescreen_details_REL_medicalhistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homescreen_details_REL_vaccination"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/btns_bg"
+                    android:onClick="onMedicalHistoryClicked"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/homescreen_medicalhistory_IMG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_medicalhistory" />
+
+                    <ImageView
+                        android:id="@+id/homescreen_medicalhistory_IMG_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/medicalhistory" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/homescreen_details_REL_dailyactovity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/homescreen_details_REL_medicalhistory"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/btns_bg"
+                    android:onClick="onDailyActivityClicked"
+                    android:padding="10dp" >
+
+                    <ImageView
+                        android:id="@+id/homescreen_dailyactovity_IMG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/icon_dailyactivity" />
+
+                    <ImageView
+                        android:id="@+id/homescreen_dailyactovity_IMG_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dailyactivity" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

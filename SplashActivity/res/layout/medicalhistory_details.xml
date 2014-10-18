@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/medicalhistory_details_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/main_homeScreen_REL_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                layout="@layout/simple_top_bar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/medicalhistory_details_REL_babydetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/medicalhistory_icon_bg" >
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/medicalhistory_details_Scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/medicalhistory_details_REL_header"
+            android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/medicalhistory_details_REL_babydetails"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/medicalhistory_details_TXT_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="Enter Your Baby Medical History details Here."
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/medicalhistory_details_REL_dateofvisit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/medicalhistory_details_TXT_heading"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="5dip" >
+
+                    <TextView
+                        android:id="@+id/medicalhistory_details_TXT_dateofvisit"
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Date of Visit: "
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:id="@+id/medicalhistory_details_TXT_dateofvisit_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/medicalhistory_details_TXT_dateofvisit"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:hint=" DateofVisit*"
+                        android:paddingLeft="5dp"
+                        android:background="@drawable/bg_edittext"
+                        android:textColor="@android:color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/medicalhistory_details_REL_doctorname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/medicalhistory_details_REL_dateofvisit"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:id="@+id/medicalhistory_details_TXT_doctorname"
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Doctor Name: "
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/medicalhistory_details_ETXT_doctorname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/medicalhistory_details_TXT_doctorname"
+                        android:hint="Doctor name*"
+                        android:padding="5dp"
+                        android:singleLine="true" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/medicalhistory_details_REL_purpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/medicalhistory_details_REL_doctorname"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:id="@+id/medicalhistory_details_TXT_purpose"
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:text="Purpose: "
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/medicalhistory_details_ETXT_purpose"
+                        android:layout_width="fill_parent"
+                        android:layout_height="103dp"
+                        android:layout_below="@+id/medicalhistory_details_TXT_purpose"
+                        android:gravity="top"
+                        android:hint="Purpose*"
+                        android:imeOptions="actionDone"
+                        android:padding="5dp" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/medicalhistory_details_REL_remarks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="103dp"
+                    android:layout_below="@+id/medicalhistory_details_REL_purpose"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:id="@+id/medicalhistory_details_TXT_remarks"
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:text="Remarks:"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/medicalhistory_details_ETXT_remarks"
+                        android:layout_width="fill_parent"
+                        android:layout_height="103dp"
+                        android:layout_below="@+id/medicalhistory_details_TXT_remarks"
+                        android:gravity="top"
+                        android:hint="Remarks"
+                        android:imeOptions="actionDone"
+                        android:padding="5dp" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/medicalhistory_details_REL_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/medicalhistory_details_REL_remarks"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="10dip" >
+
+                    <TextView
+                        android:id="@+id/medicalhistory_details_TXT_note"
+                        android:layout_width="110dip"
+                        android:layout_height="wrap_content"
+                        android:text="Note:"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/medicalhistory_details_ETXT_note"
+                        android:layout_width="fill_parent"
+                        android:layout_height="103dp"
+                        android:layout_below="@+id/medicalhistory_details_TXT_note"
+                        android:gravity="top"
+                        android:hint="Note"
+                        android:imeOptions="actionDone"
+                        android:padding="5dp" >
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/medicalhistory_details_REL_buttons"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/medicalhistory_details_REL_note"
+                    android:gravity="center"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/medicalhistory_details_BTN_add"
+                            android:layout_width="100dip"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/submit"
+                            android:textColor="#000000" />
+
+                        <Button
+                            android:id="@+id/medicalhistory_details_BTN_clear"
+                            android:layout_width="100dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dip"
+                            android:layout_toRightOf="@+id/medicalhistory_details_BTN_add"
+                            android:background="@drawable/clear" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

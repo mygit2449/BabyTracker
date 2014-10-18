@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/babygrowth_display_REL"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/babygrowth_display_REL_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/babygrowth_display_REL_header1"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/titlebar"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/simple_top_bar_Txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:text="Growth"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/babygrowth_display_BTN_addgrowth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/add" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/babygrowth_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/babygrowth_display_REL_header"
+            android:background="@drawable/bg" >
+
+            <RelativeLayout
+                android:id="@+id/babygrowth_REL_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <RelativeLayout
+                    android:id="@+id/babygrowth_displayl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/babytracker_icon_bg" >
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/babygrowth_REL_graphbtns"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="5dp" >
+
+                    <Button
+                        android:id="@+id/weight_graph_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/weight_graph_btn" />
+
+                    <Button
+                        android:id="@+id/height_graph_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/height_graph_btn" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/babygrowth_display_REL_growthdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/babygrowth_REL_graphbtns"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_growth_details" >
+
+                    <RelativeLayout
+                        android:id="@+id/babygrowth_display_REL_growthdetails2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" >
+
+                        <RelativeLayout
+                            android:id="@+id/babygrowth_display_LIN_heightdetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:id="@+id/babygrowth_display_TXT_height"
+                                style="@style/bodytext"
+                                android:layout_width="120dip"
+                                android:layout_height="wrap_content"
+                                android:text="Height: "
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/babygrowth_display_TXT_babyheight"
+                                style="@style/bodytext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/babygrowth_display_TXT_height"
+                                android:text="50 cm" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/babygrowth_display_LIN_weightdetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/babygrowth_display_LIN_heightdetails"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:id="@+id/babygrowth_display_TXT_weight"
+                                style="@style/bodytext"
+                                android:layout_width="120dip"
+                                android:layout_height="wrap_content"
+                                android:text="Weight: "
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/babygrowth_display_TXT_babyweight"
+                                style="@style/bodytext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/babygrowth_display_TXT_weight"
+                                android:text="6 Kg" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/babygrowth_display_LIN_circumferencedetails"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/babygrowth_display_LIN_weightdetails"
+                            android:orientation="horizontal"
+                            android:padding="10dp" >
+
+                            <TextView
+                                android:id="@+id/babygrowth_display_TXT_circumference"
+                                style="@style/bodytext"
+                                android:layout_width="120dip"
+                                android:layout_height="wrap_content"
+                                android:text="Circumference: "
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:id="@+id/babygrowth_display_TXT_babycircumference"
+                                style="@style/bodytext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/babygrowth_display_TXT_circumference"
+                                android:text="12 cm" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/babygrowth_display_REL_growthlist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/babygrowth_display_REL_growthdetails"
+                    android:padding="4dp" >
+
+                    <Button
+                        android:id="@+id/babygrowth_display_BTN_growthlist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/view_growth_details" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_emergency_Rel"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:padding="3dp" >
+
+    <TextView
+        android:id="@+id/add_emergency_Txt_title_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="Contact Name:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/add_emergency_edt_contact_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_emergency_Txt_title_name"
+        android:singleLine="true"
+        android:maxLength="32"
+        android:hint="Enter contact" />
+
+    <TextView
+        android:id="@+id/add_emergency_Txt_title_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_emergency_edt_contact_name"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="Contact Number:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/add_emergency_edt_number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_emergency_Txt_title_number"
+        android:hint="Enter Number"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:id="@+id/dialog_bts_LL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_emergency_edt_number"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/add_emergency_Btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/add_emergency_Btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</RelativeLayout>

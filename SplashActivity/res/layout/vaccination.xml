@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg" >
+
+        <RelativeLayout
+            android:id="@+id/vaccination_listview_REL_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/vaccination_listview_REL_title"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                layout="@layout/simple_top_bar" />
+        </RelativeLayout>
+
+        <com.BabyTracker.Helper.SegmentedRadioGroup
+            android:id="@+id/segment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vaccination_listview_REL_header"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dip"
+            android:checkedButton="@+id/vaccination_radio_post"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/vaccination_radio_post"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="40dip"
+                android:minWidth="120dip"
+                android:text="Pending"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors" />
+
+            <RadioButton
+                android:id="@+id/vaccination_radio_pre"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="40dip"
+                android:minWidth="120dip"
+                android:text="Completed"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors" />
+        </com.BabyTracker.Helper.SegmentedRadioGroup>
+
+        <ListView
+            android:id="@+id/vaccination_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/segment_text" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

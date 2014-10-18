@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/babytracker_row"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/doctorappointment_list_row_IMG_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/doctorappointment_list_row_TXT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You have Appointment With"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/doctorappointment_list_row_TXT_doctorname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/doctorappointment_list_row_TXT"
+            android:text="Doctorname *"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/doctorappointment_list_row_TXT_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorappointment_list_row_TXT"
+            android:layout_marginTop="10dp"
+            android:text="At "
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/doctorappointment_list_row_TXT_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/doctorappointment_list_row_TXT_doctorname"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/doctorappointment_list_row_TXT_on"
+            android:text="07-jun-2012 08:12 AM"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
